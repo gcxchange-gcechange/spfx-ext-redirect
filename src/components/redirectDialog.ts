@@ -95,7 +95,6 @@ export class redirectDialog extends BaseDialog {
   }
 
   public getConfig(): IDialogConfiguration {
-    console.log("GET CONFIG")
     return { isBlocking: true };
   }
 

@@ -4,7 +4,7 @@
   "https": true,
   "serveConfigurations": {
     "default": {
-      "pageUrl": "https://devgcx.sharepoint.com/",
+      "pageUrl": "https://devgcx.sharepoint.com/sites/CM-test/SitePages/Job-Opportunity.aspx?JobOpportunityId=213",
       "customActions": {
         "b4d4163e-452e-48c8-8996-71be4483bff3": {
           "location": "ClientSideExtension.ApplicationCustomizer",
@@ -15,7 +15,7 @@
       }
     },
     "spfxExtRedirect": {
-      "pageUrl": "hhttps://devgcx.sharepoint.com/",
+      "pageUrl": "https://devgcx.sharepoint.com/sites/CM-test/SitePages/Job-Opportunity.aspx?JobOpportunityId=213",
       "customActions": {
         "b4d4163e-452e-48c8-8996-71be4483bff3": {
           "location": "ClientSideExtension.ApplicationCustomizer",

@@ -31,10 +31,21 @@ export default class SpfxExtRedirectApplicationCustomizer
   public async onInit(): Promise<void> {
     Log.info(LOG_SOURCE, `Initialized ${strings.Title}`);
 
-    const url = this.context.pageContext.web.absoluteUrl;
-    console.log("CURRENT URL", url);
+    //Search for the parameter in the URL
+    const params = new URLSearchParams(window.location.search);
+    console.log("CURRENT URL", params);
 
-    this.context.application.navigatedEvent.add(this, this._renderDialog);
+    //Change the parameter name to whatever you want to search for
+    const myParam = params.get('JobOpportunityId');
+    console.log("MY PARAM", myParam);
+
+    //render the dialog if the parameter is found in the URL
+    if (myParam) {
+     await  this._renderDialog();
+    }
+
+
+    //this.context.application.navigatedEvent.add(this, this._renderDialog);
 
 
     return Promise.resolve();
