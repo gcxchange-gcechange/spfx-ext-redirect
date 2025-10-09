@@ -23,7 +23,7 @@ export class redirectDialog extends BaseDialog {
 
 
     this.domElement.innerHTML = `
-      <dialog 
+      <div
           id="redidectDialog"
           role=dialog 
           aria-labelledby="dialogTitle"
@@ -63,7 +63,7 @@ export class redirectDialog extends BaseDialog {
             ${careerMarketPlaceBtnText}
             </button>
         </div>
-      </dialog>
+      </div>
     `;
 
     // Attach close button handler
