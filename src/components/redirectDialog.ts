@@ -23,15 +23,20 @@ export class redirectDialog extends BaseDialog {
 
 
     this.domElement.innerHTML = `
-      <div style="
+      <dialog 
+          id="redidectDialog"
+          role=dialog 
+          aria-labelledby="dialogTitle"
+          araia-describedby="dialogBody"
+          style="
           padding: 20px;
           text-align: center;
           background: white;
           border-radius: 8px;
           box-shadow: 0 4px 12px rgb(0, 120, 212);
         ">
-        <h2 style="margin-bottom: 20px;">${title}</h2>
-        <p style='margin:0px;'>${bodyText}
+        <h2 id="dialogTitle" style="margin-bottom: 20px;">${title}</h2>
+        <p id="dialogBody" style='margin:0px;'>${bodyText}
         </p>
         <div style="margin-top: 30px; display: flex; justify-content: space-evenly; gap: 10px;">
             <button id="exploreBtn" 
@@ -58,7 +63,7 @@ export class redirectDialog extends BaseDialog {
             ${careerMarketPlaceBtnText}
             </button>
         </div>
-      </div>
+      </dialog>
     `;
 
     // Attach close button handler
