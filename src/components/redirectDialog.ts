@@ -2,15 +2,27 @@ import { BaseDialog, IDialogConfiguration } from '@microsoft/sp-dialog';
 
 export class redirectDialog extends BaseDialog {
   
-  
-  private _message: string = '';
+  private _language: string = '';
 
-  public message(value: string): void {
-    this._message = value;
+
+  public _Dialoglanguage(value: string): void {
+    const languageValue = value.startsWith("Fr") ? this._language = "fr" : this._language = "en";
+    this._language = languageValue;
   }
 
   public render(): void {
-    // Create simple DOM structure
+
+
+    const title = this._language === "fr" ? 'GCConnex à été déplacé à GCÉchange!' : 'GCConnex has moved to GCXchange!';
+    const bodyText = this._language === "fr" ?
+    `<p>Bienvenue sur GCÉchange, le nouvel espace du gouvernement du Canada dédié à la collaboration et aux possibilités de carrière. <br> Vous y trouverez le Marché de Carrière et des communautés qui vous permettront de vous connecter avec d’autres fonctionnaires. N'oubliez pas de mettre à jour vos signets!</p>`
+    : `Welcome to GCXchange, the Government of Canada's new space for collaboration and career opportunities. <br> Here you'll find the Career Marketplace and communities for connecting with other public servants. Don't forget to update your bookmarks!`;
+
+    const exploreBtnText = this._language === "fr" ? 'Explorer GCÉchange' : 'Explore GCXchange';
+    const careerMarketPlaceBtnText = this._language === "fr" ? 'Consulter le Marché de Carrière' : 'Browse the Career Marketplace';
+
+
+
     this.domElement.innerHTML = `
       <div style="
           padding: 20px;
@@ -19,10 +31,8 @@ export class redirectDialog extends BaseDialog {
           border-radius: 8px;
           box-shadow: 0 4px 12px rgb(0, 120, 212);
         ">
-        <h2 style="margin-bottom: 20px;">${this._message}</h2>
-        <p style='margin:0px;'>Welcome to GCXchange, the Government of Canada's new space for collaboration<br>
-            and career opportunities. Here you'll find the Career Marketplace and communities<br>
-            for connecting with other public servants. Don't forget to update your bookmarks!
+        <h2 style="margin-bottom: 20px;">${title}</h2>
+        <p style='margin:0px;'>${bodyText}
         </p>
         <div style="margin-top: 30px; display: flex; justify-content: space-evenly; gap: 10px;">
             <button id="exploreBtn" 
@@ -34,7 +44,7 @@ export class redirectDialog extends BaseDialog {
                 border-radius: 4px;
                 cursor: pointer;
             ">
-            Explore GCXchange
+            ${exploreBtnText}
             </button>
             <button id="careerMarketPlaceBtn" 
             style="
@@ -46,7 +56,7 @@ export class redirectDialog extends BaseDialog {
                 cursor: pointer;
             "
             >
-            Browse the Career Marketplace
+            ${careerMarketPlaceBtnText}
             </button>
         </div>
       </div>
@@ -86,6 +96,7 @@ export class redirectDialog extends BaseDialog {
   }
 
   public getConfig(): IDialogConfiguration {
+    console.log("GET CONFIG")
     return { isBlocking: true };
   }
 

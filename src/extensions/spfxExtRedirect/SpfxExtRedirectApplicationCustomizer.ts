@@ -31,28 +31,28 @@ export default class SpfxExtRedirectApplicationCustomizer
   public async onInit(): Promise<void> {
     Log.info(LOG_SOURCE, `Initialized ${strings.Title}`);
 
-    try {
-      console.log("TRY")
-      const dialog: redirectDialog = new redirectDialog();
-      dialog.message(`GCConnex has moved to GCXchange!`);
-      await dialog.show()
-      .then(() => {
-        console.log('Dialog closed');
-      });
-    }catch(e) {
-      console.log("CATCH", e)
-    }
-  
-  
+    const url = this.context.pageContext.web.absoluteUrl;
+    console.log("CURRENT URL", url);
 
-    // Dialog.alert(`Hello from ${strings.Title}:\n\n${message}`).catch(() => {
-    //   /* handle error */
-    //   console.log("ERROR")
-    // });
+    this.context.application.navigatedEvent.add(this, this._renderDialog);
 
 
     return Promise.resolve();
   }
+
+  private async _renderDialog(): Promise<void> {
+    console.log("RENDER DIALOG ")
+
+    const Lan = document.querySelector('[data-automation-id="LanguageSelector"]');
+  
+    const dialog = new redirectDialog();
+    dialog._Dialoglanguage(Lan?.textContent || '');
+    await dialog.show();
+
+
+    }
+
+
 
 
 }
