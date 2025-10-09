@@ -27,7 +27,7 @@ export class redirectDialog extends BaseDialog {
           id="redidectDialog"
           role=dialog 
           aria-labelledby="dialogTitle"
-          araia-describedby="dialogBody"
+          aria-describedby="dialogBody"
           style="
           padding: 20px;
           text-align: center;
