@@ -22,7 +22,6 @@ export class redirectDialog extends BaseDialog {
     const careerMarketPlaceBtnText = this._language === "fr" ? 'Consulter le Marché de Carrière' : 'Browse the Career Marketplace';
 
 
-
     this.domElement.innerHTML = `
       <div style="
           padding: 20px;
