@@ -24,7 +24,7 @@ export class redirectDialog extends BaseDialog {
 
     this.domElement.innerHTML = `
       <div
-          id="redidectDialog"
+          id="redirectDialog"
           role=dialog 
           aria-labelledby="dialogTitle"
           aria-describedby="dialogBody"
@@ -45,7 +45,7 @@ export class redirectDialog extends BaseDialog {
                 color: white;
                 border: none;
                 padding: 8px 16px;
-                border-radius: 4px;
+                border-radius: 4px;s
                 cursor: pointer;
             ">
             ${exploreBtnText}
