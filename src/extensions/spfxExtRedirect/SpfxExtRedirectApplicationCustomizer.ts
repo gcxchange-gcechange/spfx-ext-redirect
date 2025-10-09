@@ -52,7 +52,4 @@ export default class SpfxExtRedirectApplicationCustomizer
 
     }
 
-
-
-
 }
