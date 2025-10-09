@@ -1,0 +1,19 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "22.19.0",
+    "sdksVersions": {},
+    "version": "1.21.1",
+    "libraryName": "spfx-ext-redirect",
+    "libraryId": "fd5bc8af-e0d1-4a47-a4b5-e4a1b86603f2",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "spfx-ext-redirect",
+    "solutionShortDescription": "spfx-ext-redirect description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "extension",
+    "extensionType": "ApplicationCustomizer"
+  }
+}

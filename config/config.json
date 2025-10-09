@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "spfx-ext-redirect-application-customizer": {
+      "components": [
+        {
+          "entrypoint": "./lib/extensions/spfxExtRedirect/SpfxExtRedirectApplicationCustomizer.js",
+          "manifest": "./src/extensions/spfxExtRedirect/SpfxExtRedirectApplicationCustomizer.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "SpfxExtRedirectApplicationCustomizerStrings": "lib/extensions/spfxExtRedirect/loc/{locale}.js"
+  }
+}

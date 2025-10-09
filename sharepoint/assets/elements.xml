@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <CustomAction
+        Title="SpfxExtRedirect"
+        Location="ClientSideExtension.ApplicationCustomizer"
+        ClientSideComponentId="b4d4163e-452e-48c8-8996-71be4483bff3"
+        ClientSideComponentProperties="{&quot;message&quot;:&quot;message&quot;}">
+    </CustomAction>
+</Elements>
