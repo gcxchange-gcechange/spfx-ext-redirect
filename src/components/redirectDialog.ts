@@ -24,20 +24,20 @@ export class redirectDialog extends BaseDialog {
 
     this.domElement.innerHTML = `
       <div
-          id="redirectDialog"
-          role=dialog 
-          aria-labelledby="dialogTitle"
-          aria-describedby="dialogBody"
-          style="
-          padding: 20px;
-          text-align: center;
-          background: white;
-          border-radius: 8px;
-          box-shadow: 0 4px 12px rgb(0, 120, 212);
+        id="redirectDialog"
+        role=dialog 
+        aria-modal="true"
+        aria-labelledby="dialogTitle"
+        aria-describedby="dialogBody"
+        style="
+        padding: 20px;
+        text-align: center;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(204, 207, 207, 1);
         ">
         <h2 id="dialogTitle" style="margin-bottom: 20px;">${title}</h2>
-        <p id="dialogBody" style='margin:0px;'>${bodyText}
-        </p>
+        <div id="dialogBody" style='margin:0px;'>${bodyText}</div>
         <div style="margin-top: 30px; display: flex; justify-content: space-evenly; gap: 10px;">
             <button id="exploreBtn" 
             style="
@@ -45,7 +45,7 @@ export class redirectDialog extends BaseDialog {
                 color: white;
                 border: none;
                 padding: 8px 16px;
-                border-radius: 4px;s
+                border-radius: 4px;
                 cursor: pointer;
             ">
             ${exploreBtnText}
