@@ -36,7 +36,7 @@ export default class SpfxExtRedirectApplicationCustomizer
     console.log("CURRENT URL", params);
 
     //Change the parameter name to whatever you want to search for
-    const myParam = params.get('redirect=gcconnex');
+    const myParam = params.get('redirect');
     console.log("MY PARAM", myParam);
 
     //render the dialog if the parameter is found in the URL
