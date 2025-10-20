@@ -12,7 +12,12 @@ This extension ensures users are clearly informed about the feature relocation w
 
 ## Prerequisites
 
-> None
+## 1. In the onInit function modify the URL’s query parameter (?search=) with the term or keyword you want to search for.
+
+```ts
+
+    const myParam = params.get('redirect'); // 🔁 Replace with URL’s query parameter
+```
 
 ## Used SharePoint Framework Version
 
@@ -28,7 +33,7 @@ This extension ensures users are clearly informed about the feature relocation w
 
 | Version | Date               | Comments        |
 | ------- | ------------------ | --------------- |
-| 1.0     | October 10 , 2025  |Initial Release  |
+| 1.0     | October 20 , 2025  |Initial Release  |
 
 ## Minimal Path to Awesome
 

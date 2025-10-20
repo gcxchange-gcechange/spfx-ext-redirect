@@ -85,7 +85,6 @@ export class redirectDialog extends BaseDialog {
             } 
     
             if (careerMarketPlaceBtn) {
-                console.log("clicked")
                 careerMarketPlaceBtn.addEventListener('click', async () => {
                 await this.close();
                     window.location.href = 'https://devgcx.sharepoint.com/sites/CM-test/';
