@@ -31,18 +31,26 @@ export default class SpfxExtRedirectApplicationCustomizer
   public async onInit(): Promise<void> {
     Log.info(LOG_SOURCE, `Initialized ${strings.Title}`);
 
-    //Search for the parameter in the URL
-    const params = new URLSearchParams(window.location.search);
- 
-    //Change the parameter name to whatever you want to search for
-    const myParam = params.get('redirect');
+    //Make sure this is the homepage
+    const absoluteUrl = this.context.pageContext.web.absoluteUrl;
+
+    const currentUrl = window.location.origin + window.location.pathname;
  
 
-    //render the dialog if the parameter is found in the URL
-    if (myParam) {
-     await  this._renderDialog();
+    if ( currentUrl === `${absoluteUrl}/` || currentUrl === `${absoluteUrl}/SitePages/Home.aspx`) {
+  
+      //Search for the parameter in the URL
+      const params = new URLSearchParams(window.location.search);
+   
+      //Change the parameter name to whatever you want to search for
+      const myParam = params.get('redirect');
+
+      //render the dialog if the parameter is found in the URL
+        if  (myParam ) {
+        await  this._renderDialog();
+        }
     }
-
+    
     return Promise.resolve();
   }
 
