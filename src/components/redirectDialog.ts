@@ -30,14 +30,14 @@ export class redirectDialog extends BaseDialog {
         aria-labelledby="dialogTitle"
         aria-describedby="dialogBody"
         style="
-        padding: 20px;
+        padding: 50px;
         text-align: center;
         background: white;
         border-radius: 8px;
         box-shadow: 0 4px 12px rgba(204, 207, 207, 1);
         ">
         <h2 id="dialogTitle" style="margin-bottom: 20px;">${title}</h2>
-        <div id="dialogBody" style='margin:0px;'>${bodyText}</div>
+        <div id="dialogBody" style='margin:0px; margin-bottom: 20px'>${bodyText}</div>
         <div style="margin-top: 30px; display: flex; justify-content: space-evenly; gap: 10px;">
             <button id="exploreBtn" 
             style="
