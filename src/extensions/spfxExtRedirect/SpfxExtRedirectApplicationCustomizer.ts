@@ -33,26 +33,20 @@ export default class SpfxExtRedirectApplicationCustomizer
 
     //Search for the parameter in the URL
     const params = new URLSearchParams(window.location.search);
-    console.log("CURRENT URL", params);
-
+ 
     //Change the parameter name to whatever you want to search for
     const myParam = params.get('redirect');
-    console.log("MY PARAM", myParam);
+ 
 
     //render the dialog if the parameter is found in the URL
     if (myParam) {
      await  this._renderDialog();
     }
 
-
-    //this.context.application.navigatedEvent.add(this, this._renderDialog);
-
-
     return Promise.resolve();
   }
 
   private async _renderDialog(): Promise<void> {
-    console.log("RENDER DIALOG ")
 
     const Lan = document.querySelector('[data-automation-id="LanguageSelector"]');
   
