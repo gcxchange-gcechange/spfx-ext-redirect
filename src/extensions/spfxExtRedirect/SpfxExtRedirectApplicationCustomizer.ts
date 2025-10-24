@@ -37,10 +37,10 @@ export default class SpfxExtRedirectApplicationCustomizer
     const currentUrl = window.location.origin + window.location.pathname;
  
 
-    if ( currentUrl === `${absoluteUrl}/` || currentUrl === `${absoluteUrl}/SitePages/Home.aspx`) {
+    if ( currentUrl === `${absoluteUrl}/` || currentUrl === `${absoluteUrl}/SitePages/Home.aspx`||  currentUrl === `${absoluteUrl}/SitePages/fr/Home.aspx` ) {
   
       //Search for the parameter in the URL
-      const params = new URLSearchParams(window.location.search);
+      const params = new URLSearchParams(window.location.search); 
    
       //Change the parameter name to whatever you want to search for
       const myParam = params.get('redirect');
